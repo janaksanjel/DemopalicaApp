@@ -1,0 +1,405 @@
+/* Main container - modern gradient and full responsiveness */
+
+
+
+
+
+
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+
+    100% {
+        top: 100%
+    }
+}
+
+@-webkit-keyframes snowflakes-shake {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px)
+    }
+
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+    }
+
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px)
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+
+    100% {
+        top: 100%
+    }
+}
+
+@keyframes snowflakes-shake {
+    0% {
+        transform: translateX(0px)
+    }
+
+    50% {
+        transform: translateX(80px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name:
+        snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function:
+        linear, ease-in-out;
+    -webkit-animation-iteration-count:
+        infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+    left: 10%;
+    -webkit-animation-delay: 1s, 1s;
+    animation-delay: 1s, 1s;
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    -webkit-animation-delay: 6s, .5s;
+    animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    -webkit-animation-delay: 8s, 3s;
+    animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    -webkit-animation-delay: 6s, 2s;
+    animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    -webkit-animation-delay: 2.5s, 1s;
+    animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    -webkit-animation-delay: 3s, 1.5s;
+    animation-delay: 3s, 1.5s
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #68f37f, #1348aa);
+    background-size: 200% 200%;
+    animation: gradientBackground 8s ease infinite;
+
+
+}
+
+
+
+
+
+
+
+
+/* Background animation */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Login form styling */
+.login-form {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* Logo styling */
+.logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Heading styling */
+h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+}
+
+/* Input fields */
+.form-group input {
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 17px;
+    color: #444;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Password toggle */
+/* Password toggle - simple and clean */
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #666;
+    transition: color 0.3s ease;
+    padding-top: 20px;
+}
+
+/* Hover effect */
+.password-toggle:hover {
+    color: #007bff;
+}
+
+
+/* Button styling */
+.logbtn button {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logbtn button:hover {
+    background: linear-gradient(to right, #0056b3, #003f7f);
+    transform: translateY(-2px);
+}
+
+
+/* Input fields - polished appearance */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Button hover effect */
+.logbtn button {
+    background: linear-gradient(to right, #28a745, #218838);
+    font-weight: bold;
+    color: #fff;
+    padding: 12px;
+    border: none;
+
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.logbtn button:hover {
+    background: linear-gradient(to right, #218838, #19692c);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+/* Designer button */
+.loginrig button {
+    background-color: #b3000f;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.loginrig button:hover {
+    background-color: #970202;
+}
+
+/* Forgot password link */
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 30px;
+        max-width: 300px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .logbtn button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .password-toggle {
+        font-size: 14px;
+        right: 8px;
+    }
+}
+
+/* Additional tweaks for small screens */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 16px;
+        max-width: 250px;
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .logbtn button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .password-toggle {
+        font-size: 18px;
+        right: 6px;
+    }
+}

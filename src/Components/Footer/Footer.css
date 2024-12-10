@@ -1,0 +1,11 @@
+/* Footer styles */
+.footer {
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

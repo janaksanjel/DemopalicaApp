@@ -1,0 +1,91 @@
+/* HomePage container */
+.home-page-container {
+    width: 50%;
+    padding: 30px;
+    /* Increased padding for better spacing */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    border-radius: 12px;
+    /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Slightly stronger shadow for depth */
+    margin-left: 22%;
+    /* Center the container by adjusting the margin */
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the content inside */
+}
+
+/* Heading styling */
+.home-page-container h2 {
+    font-size: 26px;
+    /* Slightly larger font for the heading */
+    font-weight: bold;
+    color: #2a4780;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the Bar Chart */
+.recharts-responsive-container {
+    width: 100%;
+    /* Ensure the chart uses the full width of its container */
+    height: 300px;
+    /* Keep the chart height manageable */
+    border-radius: 12px;
+    /* Rounded corners for chart container */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid styling for the chart */
+.recharts-cartesian-grid line {
+    stroke: #ddd;
+    stroke-width: 1;
+}
+
+/* Axis styling */
+.recharts-x-axis text,
+.recharts-y-axis text {
+    font-size: 13px;
+    /* Slightly larger axis text */
+    fill: #555;
+}
+
+/* Tooltip styling */
+.recharts-tooltip-wrapper {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Legend styling */
+.recharts-legend-item {
+    font-size: 14px;
+}
+
+.recharts-legend-item-text {
+    color: #333;
+}
+
+/* Styling for Bar Chart bars */
+.recharts-bar-rectangles .recharts-bar-rectangle {
+    transition: fill 0.3s ease;
+}
+
+.recharts-bar-rectangles .recharts-bar-rectangle:hover {
+    opacity: 0.8;
+}
+
+/* Specific color for bars */
+.recharts-bar-rectangle:nth-child(odd) {
+    fill: #8884d8;
+}
+
+.recharts-bar-rectangle:nth-child(even) {
+    fill: #82ca9d;
+}

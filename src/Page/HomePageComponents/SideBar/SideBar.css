@@ -1,0 +1,146 @@
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+
+    color: black;
+
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.sidebar-header {
+    background-color: #ffffff;
+    color: rgb(65, 65, 65);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+
+
+}
+
+.sidebar-header h4 {
+    margin: 5px 0;
+    font-weight: 900;
+}
+
+/* Sidebar Option Styling */
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.sidebar-option {
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Icon Styling */
+.sidebar-option span {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar-option:hover {
+    background-color: #dce4f0;
+}
+
+/* Active State */
+.sidebar-option.active {
+    background-color: #2a4780;
+    color: white;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    padding-left: 20px;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #dce4f0;
+}
+
+/* Open State for Dropdown */
+.sidebar-option.open {
+    background-color: #2a4780;
+    color: white;
+}
+
+.sidebar-option.open i {
+    transform: rotate(90deg);
+}
+
+.sidebar-option.open .dropdown-menu {
+    display: block;
+}
+
+/* Container Styling for Additional Boxes */
+.category-box {
+    width: 250px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* List Styling */
+.category-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect for List Items */
+.category-list li:hover {
+    background-color: #dce4f0;
+}
+
+/* Icon Styling for List Items */
+.icon {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #2a4780;
+}

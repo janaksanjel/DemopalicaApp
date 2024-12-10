@@ -1,0 +1,298 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.Navbar {
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(135deg, #25ac5d 0%, #3b3bff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styles */
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Navbar text (title) */
+.logotext {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logotext:hover {
+    color: #ffcc00;
+}
+
+/* Dropdown menu styles for notifications */
+.dropdown-menuN {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    min-width: 150px;
+    margin-bottom: 100px;
+    margin-right: 250px;
+}
+
+.dropdown-menuN.show {
+    display: flex;
+}
+
+.dropdown-menuN a {
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menuN a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Profile dropdown container */
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    min-width: 150px;
+    margin-bottom: 100px;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navbar dropdown (select) */
+.navbar-dropdown {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar-dropdown:focus {
+    box-shadow: 0 0 5px rgba(59, 59, 255, 0.8);
+}
+
+/* Search input styles */
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 5px rgba(59, 59, 255, 0.8);
+}
+
+/* Profile picture */
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Notification icon */
+.notification {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Greeting text */
+.Navbar p {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .Navbar {
+        height: 70px;
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logotext {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .navbar-dropdown {
+        font-size: 12px;
+        padding: 8px;
+        width: 150px;
+    }
+
+    .search-input {
+        width: 180px;
+        font-size: 14px;
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Navbar p {
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Navbar {
+        flex-direction: row;
+        height: auto;
+        padding: 5px;
+        justify-content: space-between;
+    }
+
+    .logotext {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .navbar-dropdown {
+        width: 100%;
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .search-input {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .profile {
+        width: 20px;
+        height: 20px;
+        margin: 3px 0;
+    }
+
+    .Navbar p {
+        font-size: 10px;
+        margin-right: 4px;
+    }
+
+    .dropdown-menu {
+        min-width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Navbar {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .logotext {
+        font-size: 10px;
+    }
+
+    .navbar-dropdown {
+        width: 80px;
+        font-size: 7px;
+        margin-right: 10px;
+    }
+
+    .search-input {
+        width: 80px;
+        font-size: 7px;
+    }
+
+    .notification {
+        width: 30px;
+        height: 30px;
+
+    }
+
+
+
+}
