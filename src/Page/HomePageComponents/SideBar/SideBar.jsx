@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./SideBar.css";
-// import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure the font-awesome CSS is included
+import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure the font-awesome CSS is included
 
 function SideBar() {
   const [openDropdown, setOpenDropdown] = useState(null);

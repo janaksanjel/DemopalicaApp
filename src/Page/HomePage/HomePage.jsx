@@ -9,18 +9,14 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import "./HomePage.css"; // Import the CSS file
+import "./HomePage.css"; // Ensure this file exists and is correctly linked
 
+// Data for the chart
 const data = [
-  {
-    name: "प्रचार प्रसार सम्बन्धी",
-    "अहिलेसम्मको गुनासो": 7,
-    "आजको गुनासो": 0,
-  },
   {
     name: "इन्जिनियरिङ सेवा",
     "अहिलेसम्मको गुनासो": 4,
-    "आजको गुनासो": 0,
+    "आजको गुनासो": 2,
   },
   {
     name: "उपचार सम्बन्धी",
@@ -30,7 +26,7 @@ const data = [
   {
     name: "खाध्यान्न सम्बन्धी",
     "अहिलेसम्मको गुनासो": 5,
-    "आजको गुनासो": 0,
+    "आजको गुनासो": 2,
   },
   {
     name: "अन्य",
@@ -48,7 +44,7 @@ export class HomePage extends Component {
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
               data={data}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              margin={{ top: 5, right: -10, left: -10, bottom: 5 }}
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
@@ -59,6 +55,94 @@ export class HomePage extends Component {
               <Bar dataKey="आजको गुनासो" fill="#82ca9d" />
             </BarChart>
           </ResponsiveContainer>
+        </div>
+        <div className="other">
+          <div className="info">
+            <h1>जनतालाई सम्प्रेषण भएको सुचनाहरु</h1>
+            <div className="today-total-wrapper">
+              <div className="today">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Today"
+                />
+                <h1>आज</h1>
+                <h2>3</h2>
+              </div>
+              <div className="total">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Total"
+                />
+                <h1>जम्मा</h1>
+                <h2>30</h2>
+              </div>
+            </div>
+          </div>
+
+          <div className="info1">
+            <h1>कर्मचारीहरु लाई सम्प्रेषण भएको सुचना तथा निर्देशनहरु</h1>
+            <div className="today-total-wrapper">
+              <div className="today1">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Today"
+                />
+                <h1>आज</h1>
+                <h2>5</h2>
+              </div>
+              <div className="total1">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Total"
+                />
+                <h1>जम्मा</h1>
+                <h2>50</h2>
+              </div>
+            </div>
+          </div>
+
+          <div className="info2">
+            <h1>राहत लगत</h1>
+            <div className="today-total-wrapper">
+              <div className="today">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Today"
+                />
+                <h1>आज</h1>
+                <h2>3</h2>
+              </div>
+              <div className="total">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Total Relief"
+                />
+                <h1>जम्मा</h1>
+                <h2>15</h2>
+              </div>
+            </div>
+          </div>
+          <div className="info2">
+            <h1>सहभागी जनताहरुको संख्या</h1>
+            <div className="today-total-wrapper">
+              <div className="today">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Today"
+                />
+                <h1>आज</h1>
+                <h2>3</h2>
+              </div>
+              <div className="total1">
+                <img
+                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
+                  alt="Participants"
+                />
+                <h1>जम्मा</h1>
+                <h2>120</h2>
+              </div>
+            </div>
+          </div>
         </div>
       </>
     );

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
+
 // import Footer from "../../Components/Footer/Footer";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showpass, setShowpass] = useState(false);
+  const navigate = useNavigate();
 
   const togglePassword = () => {
     setShowpass(!showpass);
@@ -21,9 +24,9 @@ function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!username || !password) {
-      alert("Please fill out all fields!");
-      return;
+
+    if (username === "Admin" || password === "12345") {
+      navigate("/main/home_page");
     }
     console.log("Username:", username);
     console.log("Password:", password);

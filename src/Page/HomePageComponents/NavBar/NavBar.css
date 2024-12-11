@@ -239,6 +239,12 @@ body {
         margin: 5px 0;
     }
 
+    .dropdown-menuN {
+        width: auto;
+        font-size: 12px;
+        margin-right: 50px;
+    }
+
     .search-input {
         width: 100%;
         margin: 5px 0;
@@ -280,6 +286,7 @@ body {
         width: 80px;
         font-size: 7px;
         margin-right: 10px;
+
     }
 
     .search-input {
@@ -290,6 +297,8 @@ body {
     .notification {
         width: 30px;
         height: 30px;
+
+
 
     }
 
