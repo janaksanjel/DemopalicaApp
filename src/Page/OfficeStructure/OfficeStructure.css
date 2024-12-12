@@ -1,0 +1,183 @@
+/* Base styles */
+
+.card-icon img {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
+
+.office-structure {
+    max-width: 1200px;
+    margin: 120px;
+    display: grid;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20%;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.sub-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.card h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Card colors */
+.card.green {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+}
+
+.card.purple {
+    background-color: #f3e5f5;
+    border-left: 5px solid #9c27b0;
+}
+
+.card.blue {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196f3;
+}
+
+.card.red {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+
+    /* Make the office-structure more mobile-friendly */
+    .office-structure {
+        margin: 20px;
+        margin-left: 0;
+        padding: 5%;
+    }
+
+    /* Adjust the font size of the section title */
+    .section-title {
+        font-size: 20px;
+    }
+
+    /* Modify sub-section title font size */
+    .sub-section-title {
+        font-size: 18px;
+    }
+
+    /* Adjust the cards container to make it more mobile-friendly */
+    .cards {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure cards take full width on small screens */
+    .card {
+        min-width: 100%;
+        margin-bottom: 20px;
+        /* Add space between cards */
+    }
+
+    /* Adjust card content padding */
+    .card h4 {
+        font-size: 16px;
+    }
+
+    .card-value {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Further adjustments for very small screens */
+    .section-title {
+        font-size: 18px;
+    }
+
+    .sub-section-title {
+        font-size: 16px;
+    }
+
+    /* Make card text even smaller */
+    .card h4 {
+        font-size: 14px;
+    }
+
+    .card-value {
+        font-size: 18px;
+    }
+
+    /* Resize card icons for very small screens */
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Adjust card layout on very small screens */
+    .cards {
+        gap: 8px;
+    }
+
+    .card {
+        min-width: 100%;
+        padding: 15px;
+    }
+}

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import mans from "/src/assets/mans.png";
+
 import {
   BarChart,
   Bar,
@@ -59,20 +61,15 @@ export class HomePage extends Component {
         <div className="other">
           <div className="info">
             <h1>जनतालाई सम्प्रेषण भएको सुचनाहरु</h1>
+            <hr />
             <div className="today-total-wrapper">
               <div className="today">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Today"
-                />
+                <img src={mans} alt="Today" />
                 <h1>आज</h1>
                 <h2>3</h2>
               </div>
               <div className="total">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Total"
-                />
+                <img src={mans} alt="Total" />
                 <h1>जम्मा</h1>
                 <h2>30</h2>
               </div>
@@ -80,21 +77,15 @@ export class HomePage extends Component {
           </div>
 
           <div className="info1">
-            <h1>कर्मचारीहरु लाई सम्प्रेषण भएको सुचना तथा निर्देशनहरु</h1>
+            <h1>कर्मचारीहरु लाई सम्प्रेषण भएको सुचना तथा निर्देशनहरु</h1> <hr />
             <div className="today-total-wrapper">
               <div className="today1">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Today"
-                />
+                <img src={mans} alt="Today" />
                 <h1>आज</h1>
                 <h2>5</h2>
               </div>
               <div className="total1">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Total"
-                />
+                <img src={mans} alt="Total" />
                 <h1>जम्मा</h1>
                 <h2>50</h2>
               </div>
@@ -102,42 +93,30 @@ export class HomePage extends Component {
           </div>
 
           <div className="info2">
-            <h1>राहत लगत</h1>
+            <h1>राहत लगत</h1> <hr />
             <div className="today-total-wrapper">
               <div className="today">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Today"
-                />
+                <img src={mans} alt="Today" />
                 <h1>आज</h1>
                 <h2>3</h2>
               </div>
               <div className="total">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Total Relief"
-                />
+                <img src={mans} alt="Total Relief" />
                 <h1>जम्मा</h1>
                 <h2>15</h2>
               </div>
             </div>
           </div>
           <div className="info2">
-            <h1>सहभागी जनताहरुको संख्या</h1>
+            <h1>सहभागी जनताहरुको संख्या</h1> <hr />
             <div className="today-total-wrapper">
               <div className="today">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Today"
-                />
+                <img src={mans} alt="Today" />
                 <h1>आज</h1>
                 <h2>3</h2>
               </div>
               <div className="total1">
-                <img
-                  src="https://gwp.nirc.com.np/img/icons8-users-100.png"
-                  alt="Participants"
-                />
+                <img src={mans} alt="Participants" />
                 <h1>जम्मा</h1>
                 <h2>120</h2>
               </div>

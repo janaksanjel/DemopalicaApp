@@ -186,8 +186,9 @@ body {
     }
 
     .logo {
-        width: 35px;
-        height: 35px;
+        margin: 10px;
+        width: 40px;
+        height: 40px;
     }
 
     .logotext {
@@ -243,12 +244,14 @@ body {
         width: auto;
         font-size: 12px;
         margin-right: 50px;
+        display: none;
     }
 
     .search-input {
         width: 100%;
         margin: 5px 0;
         font-size: 12px;
+        display: none;
     }
 
     .profile {
@@ -273,34 +276,39 @@ body {
     }
 
     .logo {
-        margin-top: 10px;
-        width: 30px;
-        height: 30px;
+        margin: 10px;
+        width: 40px;
+        height: 40px;
     }
 
     .logotext {
-        font-size: 10px;
+        font-size: 18px;
     }
 
     .navbar-dropdown {
         width: 80px;
         font-size: 7px;
         margin-right: 10px;
+        display: none;
 
     }
 
     .search-input {
         width: 80px;
         font-size: 7px;
+        display: none;
     }
 
     .notification {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
+        margin-left: 40px;
 
 
 
     }
+
+
 
 
 

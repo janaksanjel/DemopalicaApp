@@ -1,7 +1,7 @@
 /* Sidebar styles */
 .sidebar {
-    width: 250px;
-    background-color: #f9f9f9;
+    width: 230px;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     color: black;
     height: 100vh;
@@ -14,6 +14,7 @@
     margin-top: 90px;
     font-family: Arial, sans-serif;
     transition: transform 0.3s ease;
+
     /* For slide-in effect on mobile */
 }
 
@@ -22,9 +23,10 @@
     background-color: #ffffff;
     color: rgb(65, 65, 65);
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
+    display: inline;
+    font-size: 16px;
     font-weight: bold;
+    margin: 10px;
 }
 
 .sidebar-header h4 {
@@ -37,6 +39,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 5px;
+
 }
 
 .sidebar-option {
@@ -48,6 +51,7 @@
     align-items: center;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
+    /* border-bottom: 1px solid black; */
 }
 
 /* Icon Styling */
@@ -57,7 +61,8 @@
 }
 
 .sidebar-option:hover {
-    background-color: #dce4f0;
+    background-color: #2a4780;
+    color: white;
 }
 
 /* Active State */
@@ -235,5 +240,196 @@
     .sidebar-option span {
         font-size: 14px;
         /* Adjust icon size */
+    }
+}
+
+
+
+
+
+
+.sidebarK-optionKK-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+.sidebarK-optionKK-header:hover {
+    background-color: #2a4780;
+
+    color: white;
+}
+
+
+
+/* Dropdown Arrow */
+.dropdownKK-arrow {
+    font-size: 14px;
+    transition: transform 0.7s ease;
+    color: #000000;
+
+
+
+}
+
+/* Rotate Arrow when Dropdown is Open */
+.sidebarKK-option.open .dropdownKK-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu Styling */
+.dropdownKK-menu {
+    display: none;
+
+
+    background-color: #ffffff;
+    border-radius: 5px;
+
+}
+
+/* Open Dropdown Menu */
+.sidebarKK-option.open .dropdownKK-menu {
+    display: block;
+}
+
+/* Dropdown Option Styling */
+.sidebarK-optionKK-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    cursor: pointer;
+    /* To indicate clickable element */
+}
+
+
+
+.sidebarK-optionKK-header span:first-child {
+    margin-right: 10px;
+    /* Space between the icon and text */
+}
+
+.dropdownKK-arrow {
+    margin-left: auto;
+    /* Push the arrow to the far right */
+}
+
+.dropdownKK-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    margin-left: 8px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+
+/* Hover and Active States for Dropdown Items */
+.dropdownKK-option:hover {
+    background-color: #2a4780;
+
+    color: white;
+}
+
+.dropdownKK-option.active {
+    background-color: #2a4780;
+    color: white;
+}
+
+.dropdownKK-option span {
+    margin-right: 10px;
+}
+
+/* Sidebar Link Hover Effect */
+.sidebarKK-option:hover {
+    background-color: #ffffff;
+}
+
+/* Active State for Sidebar Option */
+.sidebarKK-option.active {
+    background-color: #ffffff;
+    color: white;
+}
+
+/* Adjustments for Mobile/Responsive */
+@media (max-width: 768px) {
+    .sidebarKK-option {
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    .sidebar-optionKK-header p {
+        font-size: 14px;
+    }
+
+    .dropdownKK-menu {
+        padding-left: 15px;
+    }
+
+    .dropdownKK-option {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* Adjust Sidebar Width for Mobile */
+    .sidebar {
+        width: 70%;
+        transform: translateX(-100%);
+        /* Sidebar off-screen initially */
+        position: fixed;
+        left: 0;
+        top: 0;
+        transition: transform 0.3s ease;
+    }
+
+    /* Show Sidebar when Toggled */
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Sidebar Header for Mobile */
+    .sidebar-header {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* For even smaller screens (e.g., very narrow devices like some phones) */
+@media (max-width: 480px) {
+    .sidebarKK-option {
+        padding: 6px;
+    }
+
+    .sidebar-optionKK-header p {
+        font-size: 12px;
+    }
+
+    .dropdownKK-menu {
+        padding-left: 10px;
+    }
+
+    .dropdownKK-option {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Sidebar for small screens */
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-header {
+        font-size: 14px;
     }
 }
