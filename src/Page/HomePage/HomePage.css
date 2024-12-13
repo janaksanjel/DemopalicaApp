@@ -76,8 +76,8 @@
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .home-page-container {
-        width: 90%;
-        padding: 15px;
+        width: 100%;
+        padding: 5px;
     }
 
     .recharts-responsive-container {
@@ -138,7 +138,7 @@
 .today1,
 .total1 {
     margin-left: 50px;
-    flex: 0.6;
+    flex: 0.5;
     text-align: center;
     background-color: #f9f9f9;
     padding: 15px;

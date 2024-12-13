@@ -18,6 +18,7 @@ function SideBar() {
           <h4>चालु आर्थिक वर्ष: २०८१/०८२</h4>
           <h4>आर्थिक वर्ष: २०७६/२०७७</h4>
         </div>
+
         <hr />
         <div className="sidebar-options">
           {/* Home Link */}
@@ -63,7 +64,7 @@ function SideBar() {
                 <hr />
 
                 <NavLink
-                  to="/office/members"
+                  to="/office/memberSearch"
                   className="dropdownKK-option"
                   exact
                   activeClassName="active"
