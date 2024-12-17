@@ -75,7 +75,7 @@ function SideBar() {
                 <hr />
 
                 <NavLink
-                  to="/office/tool-management"
+                  to="/office/Member_Group"
                   className="dropdownKK-option"
                   exact
                   activeClassName="active"

@@ -1,3 +1,24 @@
+.dashboard-wrapper {
+    display: flex;
+}
+
+.hamburger-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 101;
+}
+
+.hamburger-toggle {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+
+
 /* HomePage container */
 .home-page-container {
     width: 50%;

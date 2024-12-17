@@ -1,0 +1,198 @@
+/* Overall Form Container */
+.tool_bikash_form {
+    max-width: 900px;
+    margin: 50px auto;
+    /* Center horizontally */
+    padding: 25px 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+/* Title Styling */
+.form_title {
+    text-align: center;
+    color: #333333;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Form Layout: Grid */
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 20px;
+    /* Vertical and horizontal spacing */
+    margin-bottom: 20px;
+}
+
+/* Full-width items (optional for single rows) */
+.form-group .full-width {
+    grid-column: span 2;
+    /* Make input span two columns */
+}
+
+/* Label Styling */
+label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+}
+
+/* Input Fields */
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-control:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+    outline: none;
+}
+
+/* Date and Radio Group Styling */
+.date_input_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio_group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio_group label {
+    font-weight: normal;
+    color: #555;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio_group input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Buttons Section */
+.tools_btns {
+    margin: 10px;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.btn_submit,
+.btn_cancel {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn_submit {
+    background-color: #4caf50;
+}
+
+.btn_submit:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn_cancel {
+    background-color: #f44336;
+}
+
+.btn_cancel:hover {
+    background-color: #e53935;
+    transform: translateY(-2px);
+}
+
+/* Input Group for Labels and Inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Spacing for Radio and Input Alignment */
+.radio_and_input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .tool_bikash_form {
+        margin-left: 50px;
+        /* Adjust the margin for smaller screens */
+        margin-right: 50px;
+        /* To prevent content from going off-screen */
+    }
+
+    .form-group {
+        grid-template-columns: 1fr;
+        /* Single column layout for smaller screens */
+        gap: 15px;
+        /* Reduce gap between inputs */
+    }
+
+    .tools_btns {
+        flex-direction: column;
+        /* Stack buttons vertically */
+        gap: 15px;
+        /* Adjust gap between buttons */
+        align-items: center;
+    }
+
+    .form_title {
+        font-size: 22px;
+        /* Slightly smaller font size for mobile */
+    }
+
+    .btn_submit,
+    .btn_cancel {
+        width: 100%;
+        /* Make buttons full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .tool_bikash_form {
+        padding: 20px;
+        /* Reduce padding for very small screens */
+    }
+
+    .form_title {
+        font-size: 20px;
+        /* Further reduce font size on very small screens */
+    }
+
+    .btn_submit,
+    .btn_cancel {
+        padding: 10px 25px;
+        /* Adjust button padding for smaller screens */
+    }
+}
