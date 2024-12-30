@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import mans from "/src/assets/mans.png";
 
 import {
@@ -12,9 +12,15 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./HomePage.css"; // Ensure this file exists and is correctly linked
+import axios from "axios";
 
 // Data for the chart
 const data = [
+  {
+    name: "इन्जिनियरिङ सेवा",
+    "अहिलेसम्मको गुनासो": 4,
+    "आजको गुनासो": 2,
+  },
   {
     name: "इन्जिनियरिङ सेवा",
     "अहिलेसम्मको गुनासो": 4,
@@ -36,6 +42,12 @@ const data = [
     "आजको गुनासो": 2,
   },
 ];
+
+function GetallData() {
+  axios.get(
+    "http://localhost:8080/GWP/quarantineCapacity/gunashoReportLanding"
+  );
+}
 
 export class HomePage extends Component {
   render() {

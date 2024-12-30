@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import profileImg from "../../../assets/gear.png";
+import profileImg from "../../../assets/profile.png";
 import notification from "../../../assets/notification.png";
 import "./NavBar.css";
 
-function HomeNavBar({ userName }) {
+function HomeNavBar({ userName, onToggleSidebar }) {
   // drop down menu for profile
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -29,6 +29,9 @@ function HomeNavBar({ userName }) {
         src="https://gwp.nirc.com.np/images/logo.png"
         alt="logo"
       />
+      <div className="hamburger" onClick={onToggleSidebar}>
+        <span>☰</span>
+      </div>
       <div className="dropdown">
         <h2 className="logotext">डेमो पालिका</h2>
       </div>

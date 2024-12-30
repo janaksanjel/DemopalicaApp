@@ -1,3 +1,39 @@
+/* In NavBar.css */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: white;
+}
+
+/* In SideBar.css */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    /* initially hidden */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s;
+}
+
+.sidebar.open {
+    left: 0;
+    /* show sidebar when open */
+}
+
+.sidebar.closed {
+    left: -250px;
+    /* hide sidebar when closed */
+}
+
+
+
+
 /* Reset and global styles */
 * {
     margin: 0;
@@ -273,6 +309,7 @@ body {
 @media (max-width: 1024px) {
     .Navbar {
         justify-content: space-between;
+        padding: 10px;
     }
 
     .logo {
@@ -308,11 +345,6 @@ body {
 
     }
 
-    .profile {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-    }
 
 
     .profile {
@@ -321,6 +353,12 @@ body {
         margin-right: 10px;
     }
 
+    .hamburger {
+        width: 10px;
+        height: 10px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
 
 
 

@@ -196,3 +196,88 @@ label {
         /* Adjust button padding for smaller screens */
     }
 }
+
+.datatabeltoll {
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
+
+.datatabeltoll th,
+.datatabeltoll td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.datatabeltoll th {
+    background-color: #1162b8;
+    color: white;
+    cursor: pointer;
+}
+
+.datatabeltoll tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.datatabeltoll tr:hover {
+    background-color: #f1f1f1;
+}
+
+.datatabeltoll .action-buttons {
+    text-align: center;
+}
+
+.datatabeltoll .action-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.datatabeltoll .edit {
+    color: #007bff;
+    font-size: 20px;
+}
+
+.datatabeltoll .delete {
+    color: #ff0019;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .datatabeltoll {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .datatabeltoll th,
+    .datatabeltoll td {
+        padding: 6px;
+    }
+
+    .datatabeltoll .edit,
+    .datatabeltoll .delete {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .datatabeltoll {
+        font-size: 10px;
+    }
+
+    .datatabeltoll th,
+    .datatabeltoll td {
+        padding: 4px;
+    }
+
+    .datatabeltoll .edit,
+    .datatabeltoll .delete {
+        font-size: 14px;
+    }
+}

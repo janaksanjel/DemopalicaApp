@@ -153,6 +153,7 @@
         margin: 20px;
         margin-left: 0;
         padding: 5%;
+
     }
 
     /* Adjust the font size of the section title */
@@ -194,6 +195,7 @@
     /* Further adjustments for very small screens */
     .section-title {
         font-size: 18px;
+        margin-top: 20px;
     }
 
     .sub-section-title {

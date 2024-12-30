@@ -1,3 +1,31 @@
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    /* Adds smooth transition */
+
+    /* Hide the sidebar */
+}
+
+.sidebar.open {
+    transform: translateX(0);
+    /* Moves the sidebar into view */
+}
+
+.sidebar.closed {
+    transform: translateX(-100%);
+    /* Hides sidebar when closed */
+}
+
+
+
 /* Sidebar styles */
 .sidebar {
     width: 230px;
@@ -157,9 +185,8 @@
         height: 100%;
         transform: translateX(-100%);
         /* Initially off-screen */
-        position: fixed;
-        left: 0;
-        top: 0;
+
+
         transition: transform 0.3s ease;
     }
 
@@ -214,7 +241,8 @@
 /* For even smaller screens (e.g., very narrow devices like some phones) */
 @media screen and (max-width: 480px) {
     .sidebar {
-        width: 100%;
+        width: 80%;
+        margin-top: 80px;
     }
 
     .sidebar-header {
@@ -426,7 +454,9 @@
 
     /* Sidebar for small screens */
     .sidebar {
-        width: 100%;
+        width: 60%;
+
+
     }
 
     .sidebar-header {

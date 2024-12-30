@@ -3,17 +3,22 @@ import { NavLink } from "react-router-dom";
 import "./SideBar.css";
 // import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure the font-awesome CSS is included
 
-function SideBar() {
+function SideBar({ isSidebarOpen }) {
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  const [openDropdownsanchar, setOpenDropdownsanchar] = useState(null);
   // Toggles dropdown open or close
   const toggleDropdown = (index) => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
+  const toggleDropdownsanchar = (index) => {
+    setOpenDropdownsanchar(openDropdownsanchar === index ? null : index);
+  };
+
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
         <div className="sidebar-header">
           <h4>चालु आर्थिक वर्ष: २०८१/०८२</h4>
           <h4>आर्थिक वर्ष: २०७६/२०७७</h4>
@@ -100,16 +105,49 @@ function SideBar() {
           </div>
 
           {/* Communication Link */}
-          <NavLink
-            to="/communication"
-            className="sidebar-option"
-            exact
-            activeClassName="active"
+          {/* Communication Link */}
+          <div
+            className={`sidebarKK-option ${
+              openDropdownsanchar === 1 ? "open" : ""
+            }`}
           >
-            <span>📞</span>
-            <p>संचार</p>
-          </NavLink>
-          <hr />
+            <div
+              className="sidebarK-optionKK-header"
+              onClick={() => toggleDropdownsanchar(1)}
+            >
+              <span>📞</span>
+              <p>संचार</p>
+              <span className="dropdownKK-arrow">
+                {openDropdownsanchar === 1 ? "▲" : "▼"}
+              </span>
+            </div>
+            <hr />
+            {openDropdownsanchar === 1 && (
+              <div className="dropdownKK-menu">
+                <NavLink
+                  to="/office/addMessage"
+                  className="dropdownKK-option"
+                  exact
+                  activeClassName="active"
+                >
+                  <span>📺</span>
+                  <p>सूचना तथा निर्देशन </p>
+                </NavLink>
+                <hr />
+
+                <NavLink
+                  to="/office/tool-approval"
+                  className="dropdownKK-option"
+                  exact
+                  activeClassName="active"
+                >
+                  <span>💌</span>
+                  <p>गुनासो</p>
+                </NavLink>
+                <hr />
+              </div>
+            )}
+          </div>
 
           {/* Other Links */}
           <NavLink

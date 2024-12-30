@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-
-// import Footer from "../../Components/Footer/Footer";
+import axios from "axios"; // Corrected import
 
 function LoginPage() {
   const [username, setUsername] = useState("");
@@ -10,70 +9,63 @@ function LoginPage() {
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();
 
+  // Toggle password visibility
   const togglePassword = () => {
     setShowpass(!showpass);
   };
 
+  // Handle username input change
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
 
+  // Handle password input change
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const token = localStorage.getItem("token");
+  // Handle form submission
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (username === "Admin" || password === "12345") {
-      navigate("/main/home_page");
+    try {
+      // Make the POST request using axios to the login API
+      const response = await axios.post(
+        "http://localhost:8080/GWP/user/login",
+        {
+          username: username,
+          password: password,
+        }
+      );
+
+      console.log(response.data); // Log the response to check its contents
+
+      // Check if the login was successful based on the response status
+      if (response.data.status === "success") {
+        // Store user data in localStorage for later use
+        localStorage.setItem("userData", JSON.stringify(response.data));
+
+        // Navigate to the homepage or user dashboard
+        navigate("/main/home_page");
+      } else {
+        alert("Invalid username or password.");
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      alert("An error occurred while trying to log in.");
     }
-    console.log("Username:", username);
-    console.log("Password:", password);
   };
 
   return (
     <>
-      <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
+      <div className="snowflakes" aria-hidden="true">
+        {/* Snowflakes for decoration */}
+        {[...Array(40)].map((_, index) => (
+          <div key={index} className="snowflake">
+            ❄
+          </div>
+        ))}
       </div>
 
       <div className="container">
@@ -85,11 +77,11 @@ function LoginPage() {
             src="https://gwp.nirc.com.np/images/logo.png"
             alt="Nepali Logo"
             className="logo"
+            style={{ width: 100, height: 100 }}
           />
 
-          <h2>आउनु भएकोमा स्वागत छ!</h2>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="form-groupp">
               <label htmlFor="username">प्रयोगकर्तानाम</label>
               <input
                 type="text"
@@ -97,12 +89,12 @@ function LoginPage() {
                 value={username}
                 onChange={handleUsernameChange}
                 placeholder="प्रयोगकर्तानाम प्रविष्ट गर्नुहोस्"
-                inputMode="text" // Optimized for general text
-                autoComplete="username" // Autofill enabled
-                required // Enforces field entry
+                inputMode="text"
+                autoComplete="username"
+                required
               />
             </div>
-            <div className="form-group">
+            <div className="form-groupp">
               <label htmlFor="password">पासवर्ड</label>
               <input
                 type={showpass ? "text" : "password"}
@@ -110,22 +102,21 @@ function LoginPage() {
                 value={password}
                 onChange={handlePasswordChange}
                 placeholder="पासवर्ड प्रविष्ट गर्नुहोस्"
-                autoComplete="current-password" // Autofill for passwords
-                required // Mandatory field
+                autoComplete="current-password"
+                required
               />
               <span className="password-toggle" onClick={togglePassword}>
-                {showpass ? "🙈" : "👁️"} {/* Toggle icon */}
+                {showpass ? "🙈" : "👁️"}
               </span>
             </div>
             <div className="logbtn">
               <button type="submit">लग-इन</button>
             </div>
           </form>
-          <a href="#" className="forgot-password">
+          <a href="/forgot-password" className="forgot-password">
             Forgot Password?
           </a>
         </div>
-        {/* <Footer /> */}
       </div>
     </>
   );

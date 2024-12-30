@@ -67,6 +67,15 @@ function MemberSearch() {
 
       {/* Table Section */}
       <div className="tableContainerr">
+        <div className="extraitem">
+          Search:
+          <input type="search" placeholder="Search Here !" />
+          <div className="membersbtn">
+            <input type="submit" value="Export To" name="Export To" />
+            <input type="submit" value="Print" name="Print" />
+          </div>
+        </div>
+
         <table className="membersTablee">
           <thead>
             <tr>

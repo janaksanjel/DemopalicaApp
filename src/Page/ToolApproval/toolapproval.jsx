@@ -13,7 +13,7 @@ function Toolapproval() {
         <div className="tool_form">
           <form>
             {/* Form Grid */}
-            <div className="form-group">
+            <div className="form-grou">
               {/* Organization Name */}
               <div className="input-group">
                 <label htmlFor="organizationName">
@@ -57,7 +57,7 @@ function Toolapproval() {
                 <label htmlFor="registrationDate">दर्ता मिति:</label>
                 <div className="date_input_group">
                   <input
-                    type="text"
+                    type="date"
                     className="form-control"
                     id="registrationDate"
                     placeholder="YYYY-MM-DD"
@@ -91,7 +91,7 @@ function Toolapproval() {
                 <label htmlFor="formationDate">गठन भएको मिति:</label>
                 <div className="date_input_group">
                   <input
-                    type="text"
+                    type="date"
                     className="form-control"
                     id="formationDate"
                     placeholder="YYYY-MM-DD"
@@ -137,6 +137,156 @@ function Toolapproval() {
             </div>
           </form>
         </div>
+      </div>
+
+      <div className="datatabeltoll">
+        <table class="datatabeltoll">
+          <thead>
+            <tr>
+              <th>क्र. सं.</th>
+              <th>टोल विकास संस्थाको नाम</th>
+              <th>ठेगाना</th>
+              <th>दर्ता नम्बर</th>
+              <th>दर्ता मिति</th>
+              <th>गठन भएको मिति</th>
+              <th>कार्य</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>रानीपुर टोल बिकाश संस्था</td>
+              <td></td>
+              <td>45</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>बेलबारी टोल बिकाश संस्था</td>
+              <td></td>
+              <td>13</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>धरहरा टोल बिकाश संस्था</td>
+              <td></td>
+              <td>61</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>संगम टोल बिकाश संस्था</td>
+              <td></td>
+              <td>61</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>काठमाण्डौ टोल बिकाश संस्था</td>
+              <td></td>
+              <td>25</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>पाटन टोल बिकाश संस्था</td>
+              <td></td>
+              <td>61</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>धरान टोल बिकाश संस्था</td>
+              <td></td>
+              <td>61</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>चितवन टोल बिकाश संस्था</td>
+              <td></td>
+              <td>25</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>ललितपुर टोल बिकाश संस्था</td>
+              <td></td>
+              <td>61</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>भक्तपुर टोल बिकाश संस्था</td>
+              <td></td>
+              <td>25</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>कावासोती टोल बिकाश संस्था</td>
+              <td></td>
+              <td>30</td>
+              <td></td>
+              <td></td>
+              <td class="action-buttons">
+                <button class="edit">&#9998;</button>
+                <button class="delete">&#128465;</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </>
   );
